@@ -193,6 +193,12 @@ p {
         bottom: 70px;
     };
 }
+.ptb-50 {
+  padding: {
+      top: 20px;
+      bottom: 20px;
+  };
+}
 .pt-70 {
     padding-top: 70px;
 }
@@ -9462,6 +9468,14 @@ Blog Area CSS
 /*================================================
 Blog Details Area CSS
 =================================================*/
+.blog-details-area {
+  background: $white-color;
+  p {
+    font-size: 1.2rem;
+  }
+
+}
+
 .blog-details-desc {
     .article-image {
         img {
@@ -9529,7 +9543,7 @@ Blog Details Area CSS
         }
     }
     .article-content {
-        margin-top: 30px;
+        margin-top: 50px;
 
         .entry-meta {
             ul {
@@ -15240,7 +15254,7 @@ Footer Area CSS
         }
     }
     ul {
-        text-align: right;
+        text-align: center;
         padding-left: 0;
         margin-bottom: 0;
         list-style-type: none;

@@ -1,11 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import Header from '../components/_App/Header';
 import Layout from '../components/_App/Layout';
 import MainBanner from '../components/Common/MainBanner';
+import Blogs from '../components/Common/Blogs';
+import SubscribeFormContainer from '../components/Common/Subscribe/SubscribeFormContainer';
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -19,6 +17,8 @@ export default function Home() {
       <Layout>
         
         <MainBanner />
+        <Blogs />
+        <SubscribeFormContainer />
 
 
       </Layout>

@@ -142,7 +142,7 @@ const Header: React.FC = () => {
               </div>
               <div className="dpm-nav-link">
                 <Link
-                  href="/public-letters"
+                  href="/coming-soon"
                   className="nav-item"
                 >
                   Public letters

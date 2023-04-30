@@ -6,8 +6,8 @@ const Footer = () => {
     <footer className="footer-area">
       <div className="container">
         <div className="footer-bottom-area">
-          <div className="row align-items-center">
-            <div className="col-lg-12 col-md-12">
+          <div className="row ">
+            <div className="col-lg-12 col-md-12 align-items-center">
               <ul>
                 <li>
                   <Link href="/privacy-policy">Privacy Policy</Link>

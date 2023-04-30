@@ -10,7 +10,7 @@ const MainBanner = () => {
             <div className="main-banner-wrapper-content">
               <h1>DearPast.me allows you to write letters to your past self</h1>
               <p>
-                Addressing the small moments and large changes that have
+                Addressing the small moments and large changes in your life that
                 happened over time. Putting pen to paper allows you to reflect
                 on the person you used to be while celebrating your
                 accomplishments and seeing the ways your life has grown.
@@ -29,6 +29,39 @@ const MainBanner = () => {
           </div>
         </div>
       </div>
+
+      <div className="container">
+                <div className="row align-items-center">
+                <div className="banner-inner-area">
+                    <div className="row">
+                        <div className="col-lg-4 col-md-6 col-sm-6">
+                            <div className="single-banner-box">
+                             
+                                <h3>Healing</h3>
+                                <p>Allowing you to confront your past experiences, emotions, and traumas, and offering the opportunity to gain insight, clarity, and personal growth.</p>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-4 col-md-6 col-sm-6">
+                            <div className="single-banner-box">
+                               
+                                <h3>Closure</h3>
+                                <p>Express your thoughts and feelings to your past self, helping you process and come to terms with past events or experiences. </p>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-4 col-md-6 col-sm-6 offset-lg-0 offset-md-3 offset-sm-3">
+                            <div className="single-banner-box">
+                              
+                                <h3>Self discovery</h3>
+                                <p>Allowing you to reflect on your past experiences, learn from your mistakes, and identify patterns in your thoughts and behaviors. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                  </div></div>
+
+
 
       <div className="banner-shape14">
         <img src="/images/banner-shape15.png" alt="image" />
