@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-import SubscribeForm from '../../components/Common/Subscribe/SubscribeForm';
+import SubscribeForm from 'components/Common/Subscribe/SubscribeForm';
 
 const ComingSoon = () => {
   const [days, setDays] = React.useState("");
