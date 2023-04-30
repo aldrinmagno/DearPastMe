@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
+import SubscribeForm from 'components/Common/Subscribe/SubscribeForm';
 
 const ComingSoon = () => {
   const [days, setDays] = React.useState("");
@@ -94,6 +95,7 @@ const ComingSoon = () => {
             
             <div className="container">
               <div className="subscribe-content">
+                <SubscribeForm />
                 <p>If you would like to be notified when your app is live, Please subscribe to our mailing list.</p>
               </div>
             </div>
