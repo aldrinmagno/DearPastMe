@@ -19,7 +19,6 @@ const Letter: React.FC<{ letter: LetterProps }> = ({ letter }) => {
     <div onClick={() => Router.push("/letters/[id]", `/letters/${letter.id}`)}>
       <h2>{letter.title}</h2>
       <small>By {authorName}</small>
-      <ReactMarkdown children={letter.content} />
       <style jsx>{`
         div {
           color: inherit;

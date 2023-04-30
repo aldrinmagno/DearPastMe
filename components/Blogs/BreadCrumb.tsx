@@ -5,7 +5,7 @@ const BreadCrumb = ({
   homePageUrl,
   homePageText,
   activePageText,
-}) => {
+} : { homePageUrl: string, homePageText: string, activePageText: string  }) => {
   return (
     <div className="page-title-area">
       <div className="container">

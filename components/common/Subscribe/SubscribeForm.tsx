@@ -24,14 +24,14 @@ const INITIAL_STATE = {
 
 const SubscribeForm = () => {
   const [contact, setSubscribeForm] = useState(INITIAL_STATE);
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit } = useForm();
 
-  const handleChange = e => {
-    const { name, value } = e.target;
+  const handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+    const { name, value } = e.target as HTMLInputElement;
     setSubscribeForm(prevState => ({ ...prevState, [name]: value }));
   }
 
-  const onSubmit = async e => {
+  const onSubmit = async (e: React.FormEvent<HTMLInputElement>) => {
     try {
       const url = `${baseUrl}/api/subscribe`;
       const { email } = contact;
@@ -60,9 +60,6 @@ const SubscribeForm = () => {
           handleChange(e);
         }}
       />
-      <div className='invalid-feedback' style={{ display: 'block' }}>
-        {errors && 'Email is required.'}
-      </div>
 
       <button type="submit" className="default-btn">
         <i className="flaticon-user"></i> Subscribe Now <span></span>

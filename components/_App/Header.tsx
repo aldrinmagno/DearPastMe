@@ -1,8 +1,6 @@
 // Header.tsx
 import React from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { signOut, useSession } from "next-auth/react";
 
 const Header: React.FC = () => {
   const [menu, setMenu] = React.useState(true);
@@ -11,17 +9,6 @@ const Header: React.FC = () => {
     setMenu(!menu);
   };
 
-  React.useEffect(() => {
-    let elementId = document.getElementById("navbar");
-    document.addEventListener("scroll", () => {
-      if (window.scrollY > 170) {
-        elementId.classList.add("is-sticky");
-      } else {
-        elementId.classList.remove("is-sticky");
-      }
-    });
-    window.scrollTo(0, 0);
-  });
 
   const classOne = menu
     ? "collapse navbar-collapse"
@@ -29,83 +16,6 @@ const Header: React.FC = () => {
   const classTwo = menu
     ? "navbar-toggler navbar-toggler-right collapsed"
     : "navbar-toggler navbar-toggler-right";
-
-  /*
-
-  const router = useRouter();
-  const isActive: (pathname: string) => boolean = (pathname) =>
-    router.pathname === pathname;
-
-  const { data: session, status } = useSession();
-
-  let left = (
-    <div className="left">
-      <Link href="/" className="bold" data-active={isActive('/')}>
-        Feed
-      </Link>
-      
-    </div>
-  );
-
-  let right = null;
-
-  if (status === 'loading') {
-    left = (
-      <div className="left">
-        <Link href="/" className="bold" data-active={isActive('/')}>
-          Feed
-        </Link>
-        
-      </div>
-    );
-    right = (
-      <div className="right">
-        <p>Validating session ...</p>
-      
-      </div>
-    );
-  }
-
-  if (!session) {
-    right = (
-      <div className="right">
-        <Link href="/api/auth/signin" data-active={isActive('/signup')}>
-          Log in
-        </Link>
-      
-      </div>
-    );
-  }
-
-  if (session) {
-    left = (
-      <div className="left">
-        <Link href="/" className="bold" data-active={isActive('/')}>
-          Letters
-        </Link>
-        <Link href="/drafts" data-active={isActive('/drafts')}>
-          My drafts
-        </Link>
-        
-      </div>
-    );
-    right = (
-      <div className="right">
-        <p>
-          {session.user.name} ({session.user.email})
-        </p>
-        <Link href="/write-to-your-past-self">
-          <button>
-           New post
-          </button>
-        </Link>
-        <button onClick={() => signOut()}>
-          <a>Log out</a>
-        </button>
-        
-      </div>
-    );
-  } */
 
   return (
     <div id="navbar" className="navbar-area">

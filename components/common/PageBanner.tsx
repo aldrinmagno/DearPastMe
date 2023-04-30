@@ -1,12 +1,14 @@
 import React from "react";
 import Link from "next/link";
 
+
+
 const PageBanner = ({
   pageTitle,
   homePageUrl,
   homePageText,
   activePageText,
-}) => {
+} : { pageTitle: string; homePageUrl: string, homePageText: string, activePageText: string  }) => {
   return (
     <div className="page-title-area">
       <div className="container">
