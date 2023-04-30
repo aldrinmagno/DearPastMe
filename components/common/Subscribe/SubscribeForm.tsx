@@ -31,7 +31,7 @@ const SubscribeForm = () => {
     setSubscribeForm(prevState => ({ ...prevState, [name]: value }));
   }
 
-  const onSubmit = async (e: React.FormEvent<HTMLInputElement>) => {
+  const onSubmit = async (e: any) => {
     try {
       const url = `${baseUrl}/api/subscribe`;
       const { email } = contact;
@@ -39,12 +39,13 @@ const SubscribeForm = () => {
       await axios.post(url, payload);
       setSubscribeForm(INITIAL_STATE);
       alertContent();
+      e.preventDefault();
     } catch (error) {
       console.log(error)
     }
   };
 
-  const textField = register('email', { required: true, pattern: /^\S+@\S+$/i  })
+  const textField = register('email', { required: true, pattern: /^\S+@\S+$/i  });
 
   return (
     <>

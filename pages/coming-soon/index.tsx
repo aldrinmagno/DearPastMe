@@ -17,15 +17,15 @@ const ComingSoon = () => {
   }, []);
 
   const commingSoonTime = () => {
-    let endTime = new Date("June 15, 2023 17:00:00 PDT");
+    let endTime:any = new Date("June 15, 2023 17:00:00 PDT");
     let endTimeParse = Date.parse(endTime) / 1000;
-    let now = new Date();
+    let now:any = new Date();
     let nowParse = Date.parse(now) / 1000;
     let timeLeft = endTimeParse - nowParse;
-    let days = Math.floor(timeLeft / 86400);
-    let hours = Math.floor((timeLeft - days * 86400) / 3600);
-    let minutes = Math.floor((timeLeft - days * 86400 - hours * 3600) / 60);
-    let seconds = Math.floor(
+    let days:any = Math.floor(timeLeft / 86400);
+    let hours:any = Math.floor((timeLeft - days * 86400) / 3600);
+    let minutes:any = Math.floor((timeLeft - days * 86400 - hours * 3600) / 60);
+    let seconds:any = Math.floor(
       timeLeft - days * 86400 - hours * 3600 - minutes * 60
     );
     if (hours < "10") {

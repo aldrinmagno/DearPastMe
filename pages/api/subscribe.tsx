@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export default async (req, res) => {
+export default async (req:any, res:any) => {
   const { email } = req.body
 
   if (!email || !email.length) {
@@ -35,6 +35,6 @@ export default async (req, res) => {
     return res.status(201).json({ message: 'success' })
   } catch (error) {
     console.log(error)
-    return res.status(500).json({ error: error.message })
+    return res.status(500).json()
   }
 }
